@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="2.3.2" package="org.example.ppgmonitor" version="1.0.0">
+    <profile name="wearable"/>
+    <ui-application appid="org.example.ppgmonitor" exec="ppgmonitor" multiple="false" nodisplay="false" taskmanage="true" type="capp">
+        <label>ppgmonitor</label>
+        <icon>ppgmonitor.png</icon>
+        <background-category value="sensor"/>
+    </ui-application>
+    <service-application appid="org.example.myservice" auto-restart="true" exec="myservice" multiple="false" nodisplay="true" taskmanage="false" type="capp">
+        <label>myservice</label>
+        <icon>myservice.png</icon>
+        <background-category value="background-network"/>
+        <background-category value="sensor"/>
+    </service-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/mediastorage</privilege>
+        <privilege>http://tizen.org/privilege/appdir.shareddata</privilege>
+        <privilege>http://tizen.org/privilege/healthinfo</privilege>
+        <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+        <privilege>http://tizen.org/privilege/display</privilege>
+        <privilege>http://tizen.org/privilege/datasharing</privilege>
+        <privilege>http://tizen.org/privilege/externalstorage.appdata</privilege>
+        <privilege>http://tizen.org/privilege/power</privilege>
+        <privilege>http://tizen.org/privilege/externalstorage</privilege>
+    </privileges>
+</manifest>
